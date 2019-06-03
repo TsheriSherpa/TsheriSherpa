@@ -463,3 +463,12 @@ body {
         
     }
 }
+@media screen and (max-width: 310px){
+	.home div h1 {
+	    font-size: 16pt;
+	    text-align: center;
+	    text-decoration: none;
+	    color: #fff7ed;
+	    letter-spacing: 22px;
+	}
+}
