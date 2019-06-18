@@ -138,6 +138,7 @@ body *, body *:before, body *:after { box-sizing: inherit; }
     display: flex;
     flex-direction: column;
     background-color: slategray;
+    min-height:100vh;
 }
 .image{
     margin-top: 10%;
