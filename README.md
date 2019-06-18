@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title> Personal website </title>
+    <h1> Personal website </h1>
   </head>
   <body>
     <h1> This is my personal portfolio website.</h1>
