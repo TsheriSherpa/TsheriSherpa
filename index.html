@@ -2,207 +2,230 @@
 <html lang="en-US">
 
 <head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1">
-				<link rel="icon" href="IMAGE/icon.jpg" type="image/jpg" sizes="16x16">
-				<title>Tsheri Sherpa</title>
-				<meta name="description" content="Core starting for responsive web design in the browser"/>
-				<script type="text/javascript">
-						const api_url="https://api.github.com/users/TsheriSherpa/repos";
-						getData();
-						
-						async function getData(){
-													const response =await fetch(api_url);
-													const data = await response.json();
-													for (i=0; i<data.length;i++){											
-															var node = document.createElement("tr");
-																	var child= document.createElement("td");    
-																	var child1= document.createElement("td");  
-																	var child2= document.createElement("td");           
-																	var textnode = document.createTextNode(data[i].name);   
-																	var textnode1 =document.createTextNode(data[i].description);
-																	var textnode2 =document.createTextNode(data[i].language); 
-																	child.appendChild(textnode);
-																	child1.appendChild(textnode1);
-																	child2.appendChild(textnode2);
-																	node.appendChild(child);
-																	node.appendChild(child1);
-																	node.appendChild(child2);
-									
-																	document.getElementById("mytable").appendChild(node); 
-													}
-							}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="IMAGE/icon.jpg" type="image/jpg" sizes="16x16">
+	<title>Tsheri Sherpa</title>
+	<meta name="description" content="Core starting for responsive web design in the browser" />
+	<script type="text/javascript">
+		const api_url = "https://api.github.com/users/TsheriSherpa/repos";
+		getData();
+		async function getData() {
+			const response = await fetch(api_url);
+			const data = await response.json();
+			for (i = 0; i < data.length; i++) {
+				var node = document.createElement("tr");
+				var child = document.createElement("td");
+				var child1 = document.createElement("td");
+				var child2 = document.createElement("td");
+				var textnode = document.createTextNode(data[i].name);
+				var textnode1 = document.createTextNode(data[i].description);
+				var textnode2 = document.createTextNode(data[i].language);
+				child.appendChild(textnode);
+				child1.appendChild(textnode1);
+				child2.appendChild(textnode2);
+				node.appendChild(child);
+				node.appendChild(child1);
+				node.appendChild(child2);
+				document.getElementById("mytable").appendChild(node);
+			}
+		}
 
-
-
-				</script>
-		
-				<link rel="stylesheet" href="CSS/body.css" type="text/css" media="all">
+	</script>
+	<link rel="stylesheet" href="CSS/body.css" type="text/css" media="all">
 </head>
 
 <body>
-				<div class="body">
-								<header class="header">
-												<span class="navbar-toggle" id="js-navbar-toggle">
-																<img src="IMAGE/list.png" alt="navbar-button" style="width: 40px;">
-												</span>
+	<div class="body">
+		<header class="header">
+			<span class="navbar-toggle" id="js-navbar-toggle">
+				<img src="IMAGE/list.png" alt="navbar-button" style="width: 40px;">
+			</span>
 
-												<nav class="navbar" id="navbar">
-																<a href="#" class="logo">Tsheri Sherpa</a>
-																<ul class="main-nav" id="js-menu">
-																				<li >
-																								<a href="#about" class="nav-links">About</a>
-																				</li>
-																				<li>
-																								<a href="#project" class="nav-links">Projects</a>
-																				</li>
-																				<li>
-																								<a href="#contact" class="nav-links" >Contact</a>
-																				</li>
-																</ul>
+			<nav class="navbar" id="navbar">
+				<a href="#" class="logo">Tsheri Sherpa</a>
+				<ul class="main-nav" id="js-menu">
+					<li>
+						<a href="#about" class="nav-links">About</a>
+					</li>
+					<li>
+						<a href="#project" class="nav-links">Projects</a>
+					</li>
+					<li>
+						<a href="#contact" class="nav-links">Contact</a>
+					</li>
+				</ul>
 
-												</nav>
-												<div class="progress-container" id="progress-container">
-																				<div class="progress-bar" id="myBar"></div>
-												</div> 
-											 <div class="header-flex">
-													<div class="side-list">
-																	<ul >
-																					<li >
-																									<a href="https://www.instagram.com/tsheri_sherpa/">
-																													<img src="IMAGE/instagram.png" alt="instagram-icon" class="side-list-ul-li-a-img">
-																									</a> 
-																					</li>
-																					<li>
-																									<a href="https://twitter.com/sherpa_tsheri">
-																													<img src="IMAGE/twitter.png" alt="instagram-icon"class="side-list-ul-li-a-img">
-																									</a> 
-																					</li>
-																					<li >
-																									<a href="https://github.com/TsheriSherpa">
-																													<img src="IMAGE/github.png" alt="instagram-icon" class="side-list-ul-li-a-img">
-																									</a> 
-																					</li>
-																					<li >
-																								 <a href="#contact">
-																												<img src="IMAGE/email.png" alt="instagram-icon" class="side-list-ul-li-a-img">
-																								 </a> 
-																					</li>
-																					<li>
-																								 <a href="https://www.linkedin.com/in/chiree-sherpa-4358a0180">
-																								<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%;"  class="side-list-ul-li-a-img">
-																									</a> 
-																				 </li>                                                                                          
-																	</ul>
-													</div>
-													<div class="header-flex-text">
-																	<h1>Tsheri Sherpa</h1>
-																	<p> Self learning enthusiast and Determined to learn new things. Patience is the key.</p>
-													</div>
+			</nav>
+			<div class="progress-container" id="progress-container">
+				<div class="progress-bar" id="myBar"></div>
 			</div>
-								</header>
-				
-					
-								<div class="about" id="about">
-								<div class="image">
-																				<img src="IMAGE/profile.JPG" alt="profile pic" class="profile-img">
-												</div>
+			<div class="header-flex">
+				<div class="side-list">
+					<ul>
+						<li>
+							<a href="https://www.instagram.com/tsheri_sherpa/">
+								<img src="IMAGE/instagram.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/sherpa_tsheri">
+								<img src="IMAGE/twitter.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/TsheriSherpa">
+								<img src="IMAGE/github.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+							</a>
+						</li>
+						<li>
+							<a href="#contact">
+								<img src="IMAGE/email.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/chiree-sherpa-4358a0180">
+								<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%;"
+									class="side-list-ul-li-a-img">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-flex-text">
+					<h1>Tsheri Sherpa</h1>
+					<p> Self learning enthusiast and Determined to learn new things. Patience is the key.</p>
+				</div>
+			</div>
+		</header>
+
+
+		<div class="about" id="about">
+			<div id="white" style="
+								    background-color: white;
+								    width: 100%;
+								    height: 120px;
+								    /* margin-top: 29%; */
+								">
+			</div>
+			<div class="image">
+				<img src="IMAGE/profile.JPG" alt="profile pic" class="profile-img">
+			</div>
 			<div class="about-text">
-																<h1>About me</h1>
-																<p class="about-me">
-																				I was never the best at school or academics, I’m just a super curious guy. I love to share these ideas and theories that interest me. I spend a lot of time building software and electronics, but there’s also a lot more to it. I’ve been working on a video format to document the logic, reasoning, and problems encountered during the process of leaning computer science. A combination of innovation and storytelling.
-																</p>
-												</div>
-							 </div>
-												<div class="project" id="project">
-																<h1>Projects</h1>
-																<div class="table">
-																			<table id="mytable">
-																								<tr>
-																												<th>Title</th>
-																												<th>Description</th>
-																												<th>Language</th>
-																								</tr>
-																	</table>
-												</div>
-								</div>
+				<h1>About me</h1>
+				<p class="about-me">
+					I was never the best at school or academics, I’m just a super curious guy. I love to share these
+					ideas and theories that interest me. I spend a lot of time building software and electronics, but
+					there’s also a lot more to it. I’ve been working on a video format to document the logic, reasoning,
+					and problems encountered during the process of leaning computer science. A combination of innovation
+					and storytelling.
+				</p>
+			</div>
+		</div>
+		<div class="project" id="project">
+			<h1>Projects</h1>
+			<div class="table">
+				<table id="mytable">
+					<tr>
+						<th>Title</th>
+						<th>Description</th>
+						<th>Language</th>
+					</tr>
+				</table>
+			</div>
+		</div>
 
-	<div class="contact" id="contact">
-		 <h1> CONTACT</h1>
-			 <form action="/action_page.php">
-				   <label for="fname">First Name</label>
-				   <input type="text" id="fname" name="firstname" placeholder="Your name..">
-			   ​
-				   <label for="lname">Last Name</label>
-				   <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-			   ​
-				   <label for="country">Country</label>
-				   <select id="country" name="country">
-					 <option value="australia">Australia</option>
-					 <option value="canada">Canada</option>
-					 <option value="usa">USA</option>
-				   </select>
-			   ​
-				   <label for="subject">Subject</label>
-				   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
+		<div class="contact" id="contact">
+			<h1> CONTACT</h1>
+			<form action="/action_page.php">
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name..">
+				​
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				​
+				<label for="country">Country</label>
+				<select id="country" name="country">
+					<option value="australia">Australia</option>
+					<option value="canada">Canada</option>
+					<option value="usa">USA</option>
+				</select>
+				​
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
 				   </textarea>
-			   ​
-				   <input type="submit" value="Submit">
-				 </form>
+				​
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<img src="http://www.cm.yuntech.edu.tw/English/images/gotop.png" onclick="topFunction()" id="myBtn"
+			title="Go to top">
+		<footer class="footer-area">
+			<div class="footer-container">
+				<p>STAY CONNECTED</p>
+				<ul>
+					<li>
+						<a href="https://www.instagram.com/tsheri_sherpa/">
+							<img src="IMAGE/instagram.png" alt="instagram-icon">
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/sherpa_tsheri">
+							<img src="IMAGE/twitter.png" alt="twitter-icon">
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/TsheriSherpa">
+							<img src="IMAGE/github.png" alt="github-icon">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.gmail.com">
+							<img src="IMAGE/email.png" alt="gmail-icon">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/chiree-sherpa-4358a0180">
+							<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%;">
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+			<div class="foot">
+				<p class="foot-paragraph1">
+					@All right reserved.
+				</p>
+				<p class="foot-paragraph2">
+					Made by Tsheri Sherpa.
+				</p>
+			</div>
+			<div id="output">Waiting for data...</div>
+			<script>
+				var rootUrl = 'http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content';
+				var resources = {
+					jsonData: '/xmlhttprequest-data.js'
+				};
+				var request = new XMLHttpRequest();
+				request.addEventListener('load', function () {
+					var jsonData = JSON.parse(request.responseText);
+					document.getElementById('output').innerHTML += '<br>' + jsonData.data;
+				});
+				request.open('GET', rootUrl + resources.jsonData, true);
+				request.send();
+			</script>
 	</div>
-	<img src="IMAGE/gotop.png" onclick="topFunction()" id="myBtn" title="Go to top">
-				<footer class="footer-area">
-							<div class="footer-container">
-											<p>STAY CONNECTED</p>
-											<ul>
-															<li>
-																			<a href="https://www.instagram.com/tsheri_sherpa/">
-																							<img src="IMAGE/instagram.png" alt="instagram-icon">
-																			</a> 
-															</li>
-															<li>
-																			<a href="https://twitter.com/sherpa_tsheri">
-																							<img src="IMAGE/twitter.png" alt="twitter-icon">
-																			</a> 
-															</li>
-																<li>
-																			<a href="https://github.com/TsheriSherpa">
-																							<img src="IMAGE/github.png" alt="github-icon">
-																			</a> 
-															</li>
-															<li>
-																			<a href="https://www.gmail.com">
-																						<img src="IMAGE/email.png" alt="gmail-icon">
-																			</a> 
-															</li>
-															<li>
-																			<a href="https://www.linkedin.com/in/chiree-sherpa-4358a0180">
-																						<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%;">
-																			</a> 
-															</li>
-																
-											</ul>
 
-							</div>
-							<div class="foot">
-												<p class="foot-paragraph1">
-																@All right reserved. 
-												</p>
-												<p class="foot-paragraph2">    
-																Made by Tsheri Sherpa.
-												</p>
-								</div>
-											
-				</footer>
- 
-			
-				<!-- Jquery needed -->
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-				<script src="JS/javascript.js"></script>
+	</footer>
 
-<!-- Function used to shrink nav bar removing paddings and adding black background -->
-			
-</div>
+
+	<!-- Jquery needed -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="JS/javascript.js"></script>
+
+	<!-- Function used to shrink nav bar removing paddings and adding black background -->
+
+	</div>
 </body>
 
 </html>
