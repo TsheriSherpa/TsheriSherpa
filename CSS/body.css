@@ -171,7 +171,7 @@ body *, body *:before, body *:after { box-sizing: inherit; }
     text-decoration: none;
     text-align: justify;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 200;
 
 }
@@ -192,6 +192,7 @@ body *, body *:before, body *:after { box-sizing: inherit; }
       border-collapse: collapse;
       border-spacing: 0;
       width: 100%;
+      max-width: 100%;
       border: 1px solid #ddd;
 }
 tr:nth-child(even){background-color: #f2f2f2}
@@ -505,7 +506,8 @@ input[type=submit]:hover {
     
     .side-list{
         width: 8%;
-        margin-top: 30%;    
+        margin-top: 30%;  
+	margin-left:8px;
     }
     .side-list li{
         padding-top: 15%;
@@ -513,11 +515,11 @@ input[type=submit]:hover {
     .header-flex-text h1{
         top: 50%;
         left: 50%;  
-        font-size: 2.3rem;
+        font-size: 2rem;
         letter-spacing: 15px;
     }
     .header-flex-text p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .header-flex-text{
         margin-left: 15%;
