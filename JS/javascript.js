@@ -1,47 +1,60 @@
 
-								let mainNav = document.getElementById('js-menu');
-								let navBarToggle = document.getElementById('js-navbar-toggle');
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+navBarToggle.addEventListener('click', function () {
+	mainNav.classList.toggle('active');
+});
 
-								navBarToggle.addEventListener('click', function () {
-												mainNav.classList.toggle('active');
-								});
-
-								$(window).scroll(function() {
-												if ($(document).scrollTop() > 150) {
-																console.log($(document).scrollTop());
-																$('.navbar').addClass('affix');
-																if ($(document).scrollTop() > 370) {
-																				document.getElementById("progress-container").style.visibility= "visible";
-																				myFunction();    
-																}     
+$(window).scroll(function() {
+	if ($(document).scrollTop() > 150) {
+		$('.navbar').addClass('affix');
+		if ($(document).scrollTop() > 370) {
+			document.getElementById("progress-container").style.visibility= "visible";
+				myFunction();    
+		}     
 												
-												} else {
-																document.getElementById("progress-container").style.visibility= "hidden";
-																$('.navbar').removeClass('affix');
-														
-												}
-								});
-								$(document).ready(function(){
-												if ($(document).scrollTop() > 150) {
-																$('.navbar').addClass('affix');
-																if ($(document).scrollTop() > 350) {
-																				document.getElementById("progress-container").style.visibility= "visible";
-																				myFunction();    
-																}     
+	} else {
+		document.getElementById("progress-container").style.visibility= "hidden";
+		$('.navbar').removeClass('affix');
+	}
+});
+
+
+$(document).ready(function(){
+	if ($(document).scrollTop() > 150) {
+		$('.navbar').addClass('affix');
+			if ($(document).scrollTop() > 350) {
+				document.getElementById("progress-container").style.visibility= "visible";
+				myFunction();    
+			}     
 												
-												} else {
-																document.getElementById("progress-container").style.visibility= "hidden";
-																$('.navbar').removeClass('affix');
-														
-												}
+	} else {
+		document.getElementById("progress-container").style.visibility= "hidden";
+		$('.navbar').removeClass('affix');
+	}
 
-								});
+});
 
-								function myFunction() {
-										var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-										var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-										var scrolled = (winScroll / height) * 100;
-										document.getElementById("myBar").style.width = scrolled + "%";
-								}
+function myFunction() {
+	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	document.getElementById("myBar").style.width = scrolled + "%";
+}
 							
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
