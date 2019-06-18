@@ -33,6 +33,7 @@ body *, body *:before, body *:after { box-sizing: inherit; }
     background-position: center top;
     background-size:cover;
     height: auto;
+    min-height:100vh;
 
 }
 .header-flex{
@@ -183,6 +184,7 @@ body *, body *:before, body *:after { box-sizing: inherit; }
     padding: 2%;
     background-color: white;
     padding-bottom: 5%;
+    min-height:100vh;
 }
 .project h1{
     font-size: 1.9em;
@@ -237,6 +239,7 @@ input[type=submit]:hover {
   height: auto;
   padding-top: 10%;
   background-color: slategray;
+  min-height:100vh;
 }
 .contact h1{
     text-decoration: none;
