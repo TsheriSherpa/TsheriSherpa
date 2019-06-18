@@ -1,23 +1,47 @@
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
 
-});
+								let mainNav = document.getElementById('js-menu');
+								let navBarToggle = document.getElementById('js-navbar-toggle');
 
-$('.nav div.main_list ul li a').click(function () {
-    // $(this).removeClass('active');
-    console.log(screen.width);
-    if(screen.width<770){
-    	console.log("Clicked menu");
-    	$("#mainListDiv").toggleClass("hide_list");
-    	$("#mainListDiv").fadeOut();
-    	myFunction();
-	}
+								navBarToggle.addEventListener('click', function () {
+												mainNav.classList.toggle('active');
+								});
 
-});
-function myFunction() {
-  var element = document.getElementById("navTrigger");
-  element.classList.remove("active");
-}
+								$(window).scroll(function() {
+												if ($(document).scrollTop() > 150) {
+																console.log($(document).scrollTop());
+																$('.navbar').addClass('affix');
+																if ($(document).scrollTop() > 370) {
+																				document.getElementById("progress-container").style.visibility= "visible";
+																				myFunction();    
+																}     
+												
+												} else {
+																document.getElementById("progress-container").style.visibility= "hidden";
+																$('.navbar').removeClass('affix');
+														
+												}
+								});
+								$(document).ready(function(){
+												if ($(document).scrollTop() > 150) {
+																$('.navbar').addClass('affix');
+																if ($(document).scrollTop() > 350) {
+																				document.getElementById("progress-container").style.visibility= "visible";
+																				myFunction();    
+																}     
+												
+												} else {
+																document.getElementById("progress-container").style.visibility= "hidden";
+																$('.navbar').removeClass('affix');
+														
+												}
+
+								});
+
+								function myFunction() {
+										var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+										var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+										var scrolled = (winScroll / height) * 100;
+										document.getElementById("myBar").style.width = scrolled + "%";
+								}
+							
+
