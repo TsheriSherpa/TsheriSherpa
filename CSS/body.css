@@ -8,7 +8,7 @@ body{
 }
 
 #myBtn {
-  display: none;
+
   position: fixed;
   bottom: 50px;
   right: 10px;
@@ -159,9 +159,10 @@ body *, body *:before, body *:after { box-sizing: inherit; }
     min-height: 100vh;
 }
 .image{
-    margin-top: 10%;
+    margin-top: -21%;
     padding: 2%;
     margin-left: 25%;
+    
 }
 .image img{
     height: auto;
@@ -330,6 +331,13 @@ input[type=submit]:hover {
 @media screen and (min-width: 768px) {
     #myBtn{
         width: 90px;
+    }
+    .image{
+        margin-top: 10%;
+        background-color: none;
+    }
+    #white{
+        display: none;
     }
     .navbar {
         display: flex;
