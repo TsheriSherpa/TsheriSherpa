@@ -7,7 +7,35 @@
 				<link rel="icon" href="IMAGE/icon.jpg" type="image/jpg" sizes="16x16">
 				<title>Tsheri Sherpa</title>
 				<meta name="description" content="Core starting for responsive web design in the browser"/>
+				<script type="text/javascript">
+						const api_url="https://api.github.com/users/TsheriSherpa/repos";
+						getData();
+						
+						async function getData(){
+													const response =await fetch(api_url);
+													const data = await response.json();
+													for (i=0; i<data.length;i++){											
+															var node = document.createElement("tr");
+																	var child= document.createElement("td");    
+																	var child1= document.createElement("td");  
+																	var child2= document.createElement("td");           
+																	var textnode = document.createTextNode(data[i].name);   
+																	var textnode1 =document.createTextNode(data[i].description);
+																	var textnode2 =document.createTextNode(data[i].language); 
+																	child.appendChild(textnode);
+																	child1.appendChild(textnode1);
+																	child2.appendChild(textnode2);
+																	node.appendChild(child);
+																	node.appendChild(child1);
+																	node.appendChild(child2);
+									
+																	document.getElementById("mytable").appendChild(node); 
+													}
+							}
 
+
+
+				</script>
 		
 				<link rel="stylesheet" href="CSS/body.css" type="text/css" media="all">
 </head>
@@ -89,53 +117,12 @@
 												<div class="project" id="project">
 																<h1>Projects</h1>
 																<div class="table">
-																			<table>
+																			<table id="mytable">
 																								<tr>
 																												<th>Title</th>
 																												<th>Description</th>
 																												<th>Language</th>
 																								</tr>
-																								<tr>
-																												<td>
-																																<a href="https://github.com/TsheriSherpa/portfolio-website" style="text-decoration: none; "   >Portfolio Website
-																																</a>
-																												</td>
-																												<td>This is my first web development project since I started learning.</td>
-																												<td>Php, Html, CSS, Javascript</td>
-																								</tr>
-																								<tr>
-																												<td>
-																																<a href="https://github.com/TsheriSherpa/android-application" style="text-decoration: none;" >Android App
-																																</a>
-																												</td>
-																												<td>This is my first android application which is not completed fully. It is app for managing gym system.</td>
-																												<td>Java</td>
-																								</tr>
-																								<tr>
-																												<td>
-																																<a href="https://github.com/TsheriSherpa/GroupWork-Emerging" style="text-decoration: none;" >Inventory Management
-																																</a>
-																												</td>
-																												<td>This is the desktop application made to manage the inventory in the      laptop store.</td>
-																												<td>Java</td>
-																								</tr>
-																								<tr>
-																												<td>
-																																<a href="https://github.com/TsheriSherpa/tsheri" style="text-decoration: none;" >Personal Website
-																																</a>
-																												</td>
-																												<td>This is my second attempt to make the responsive personoal website.</td>
-																												<td>Html, CSS, Javascript, PHP</td>
-																								</tr>
-																								<tr>
-																												<td>
-																																<a href="https://github.com/TsheriSherpa/todos" style="text-decoration: none;" >Todos App
-																																</a>
-																												</td>
-																												<td>This is my first full stack web app.</td>
-																												<td>ajax, node, express, bootstrap, jquery, handlebars, sass</td>
-																								</tr>
-																	
 																	</table>
 												</div>
 								</div>
