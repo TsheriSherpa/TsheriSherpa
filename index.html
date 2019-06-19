@@ -35,7 +35,7 @@
 	<link rel="stylesheet" href="CSS/body.css" type="text/css" media="all">
 </head>
 
-<body>
+	<body>
 	<div class="body">
 		<header class="header">
 			<span class="navbar-toggle" id="js-navbar-toggle">
@@ -149,7 +149,7 @@
 					<option value="canada">Canada</option>
 					<option value="usa">USA</option>
 				</select>
-				​
+				
 				<label for="subject">Subject</label>
 				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
 				   </textarea>
@@ -200,23 +200,9 @@
 					Made by Tsheri Sherpa.
 				</p>
 			</div>
-			<div id="output">Waiting for data...</div>
-			<script>
-				var rootUrl = 'http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content';
-				var resources = {
-					jsonData: '/xmlhttprequest-data.js'
-				};
-				var request = new XMLHttpRequest();
-				request.addEventListener('load', function () {
-					var jsonData = JSON.parse(request.responseText);
-					document.getElementById('output').innerHTML += '<br>' + jsonData.data;
-				});
-				request.open('GET', rootUrl + resources.jsonData, true);
-				request.send();
-			</script>
-	</div>
+			
 
-	</footer>
+		</footer>
 
 
 	<!-- Jquery needed -->
