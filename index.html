@@ -136,7 +136,7 @@
 
 		<div class="contact" id="contact">
 			<h1> CONTACT</h1>
-			<form action="/action_page.php">
+			<form action="/sent_mail.php">
 				<label for="fname">First Name</label>
 				<input type="text" id="fname" name="firstname" placeholder="Your name..">
 				​
@@ -144,14 +144,11 @@
 				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
 				​
 				<label for="country">Country</label>
-				<select id="country" name="country">
-					<option value="australia">Australia</option>
-					<option value="canada">Canada</option>
-					<option value="usa">USA</option>
-				</select>
+
+				<input type="text" id="lname" name="email" placeholder="Your email..">
 				
-				<label for="subject">Subject</label>
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
+				<label for="subject">Message</label>
+				<textarea id="subject" name="message" placeholder="Write something.." style="height:200px">
 				   </textarea>
 				​
 				<input type="submit" value="Submit">
