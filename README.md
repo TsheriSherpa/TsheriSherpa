@@ -8,5 +8,5 @@
   </body>
   </html> 
   
-<h1> Check it out here.<h1>
-  <a  href="tsherisherpa-tsheri.glitch.me" alt="link" > Click here</a>
+
+  <a  href="http://tsherisherpa-tsheri.glitch.me" alt="link" > Click here to visit</a>
