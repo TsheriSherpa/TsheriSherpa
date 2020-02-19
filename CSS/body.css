@@ -558,3 +558,11 @@ input[type=submit]:hover {
     }
 
 }
+
+@media screen and (min-width: 768px) {
+  
+  .footer-container ul{
+    margin:auto;
+  }
+}
+
