@@ -46,7 +46,7 @@ body *, body *:before, body *:after { box-sizing: inherit; }
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
-    background-image: url("../IMAGE/a.jpg");
+    background-image: url("../IMAGE/developer.svg");
     background-position: center top;
     background-size:cover;
     height: auto;
