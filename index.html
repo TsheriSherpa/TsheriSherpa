@@ -2,44 +2,32 @@
 <html lang="en-US">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="IMAGE/icon.jpg" type="image/jpg" sizes="16x16">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="IMAGE/icon.jpg" type="image/jpg" sizes="16x16" />
 	<title>Tsheri Sherpa</title>
 	<meta name="description" content="Core starting for responsive web design in the browser" />
-	<script type="text/javascript">
-		const api_url = "https://api.github.com/users/TsheriSherpa/repos";
-		getData();
-		async function getData() {
-			const response = await fetch(api_url);
-			const data = await response.json();
-			for (i = 0; i < data.length; i++) {
-				var node = document.createElement("tr");
-				var child = document.createElement("td");
-				var child1 = document.createElement("td");
-				var child2 = document.createElement("td");
-				var textnode = document.createTextNode(data[i].name);
-				var textnode1 = document.createTextNode(data[i].description);
-				var textnode2 = document.createTextNode(data[i].language);
-				child.appendChild(textnode);
-				child1.appendChild(textnode1);
-				child2.appendChild(textnode2);
-				node.appendChild(child);
-				node.appendChild(child1);
-				node.appendChild(child2);
-				document.getElementById("mytable").appendChild(node);
-			}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="CSS/body.css" type="text/css" media="all" />
+	<style>
+		.typing > *{
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typingAnim 2s steps(120);
+			color: orangered;
 		}
-
-	</script>
-	<link rel="stylesheet" href="CSS/body.css" type="text/css" media="all">
+		@keyframes typingAnim{
+			from { width: 0 }
+			to { width: 100% }
+		}
+	</style>
 </head>
 
-	<body>
-	<div class="body">
-		<header class="header">
+<body class="container-fluid body">
+	<div class="row">
+		<header class="header col-lg-12">
 			<span class="navbar-toggle" id="js-navbar-toggle">
-				<img src="IMAGE/list.png" alt="navbar-button" style="width: 40px;">
+				<img src="IMAGE/list.png" alt="navbar-button" style="width: 40px" />
 			</span>
 
 			<nav class="navbar" id="navbar">
@@ -55,140 +43,153 @@
 						<a href="#contact" class="nav-links">Contact</a>
 					</li>
 				</ul>
-
 			</nav>
+
+			<!-- Progress Bar -->
 			<div class="progress-container" id="progress-container">
 				<div class="progress-bar" id="myBar"></div>
 			</div>
+
+			<!-- Side list social account -->
 			<div class="header-flex">
 				<div class="side-list">
 					<ul>
 						<li>
 							<a href="https://www.instagram.com/tsheri_sherpa/">
-								<img src="IMAGE/instagram.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+								<img src="IMAGE/instagram.png" alt="instagram-icon" class="side-list-ul-li-a-img" />
 							</a>
 						</li>
 						<li>
 							<a href="https://twitter.com/sherpa_tsheri">
-								<img src="IMAGE/twitter.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+								<img src="IMAGE/twitter.png" alt="instagram-icon" class="side-list-ul-li-a-img" />
 							</a>
 						</li>
 						<li>
 							<a href="https://github.com/TsheriSherpa">
-								<img src="IMAGE/github.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+								<img src="IMAGE/github.png" alt="instagram-icon" class="side-list-ul-li-a-img" />
 							</a>
 						</li>
 						<li>
 							<a href="#contact">
-								<img src="IMAGE/email.png" alt="instagram-icon" class="side-list-ul-li-a-img">
+								<img src="IMAGE/email.png" alt="instagram-icon" class="side-list-ul-li-a-img" />
 							</a>
 						</li>
 						<li>
 							<a href="https://www.linkedin.com/in/chiree-sherpa-4358a0180">
-								<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%;"
-									class="side-list-ul-li-a-img">
+								<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%"
+									class="side-list-ul-li-a-img" />
 							</a>
 						</li>
 					</ul>
 				</div>
-				<div class="header-flex-text">
-					<h1>Tsheri Sherpa</h1>
-					<p> Self learning enthusiast and Determined to learn new things. Patience is the key.</p>
+				<div>
+					<div class="header-flex-text typing" id ="word">
+					</div>
+					<br>
+					<div class="header-flex-text">
+						<p>
+							Self learning enthusiast and Determined to learn new things.
+							Patience is the key.
+						</p>
+					</div>
 				</div>
 			</div>
 		</header>
 
-
+		<!-- About section-->
 		<div class="about" id="about">
 			<div id="white" style="
-								    background-color: white;
-								    width: 100%;
-								    height: 120px;
-								    /* margin-top: 29%; */
-								">
-			</div>
+            background-color: white;
+            width: 100%;
+            height: 120px;"></div>
 			<div class="image">
-				<img src="IMAGE/profile.JPG" alt="profile pic" class="profile-img">
+				<img src="IMAGE/profile.JPG" alt="profile pic" class="profile-img" />
 			</div>
 			<div class="about-text">
 				<h1>About me</h1>
-				<p class="about-me">
-					I was never the best at school or academics, I’m just a super curious guy. I love to share these
-					ideas and theories that interest me. Techologies has always suprised me on how rapidly it gets 
-					updated with such a drastic changes. I am currently working as a backend php developer for
-					developing the application. I am also excited on how artificial intelligence really work and 
-					its one of in my bucket list of future plan. I want to use technologies to make positive impact
-					in the society. 
+				<p class="about-me"  style="font-size: 1.5em;">
+					I was never the best at school or academics, I’m just a super
+					curious guy. I love to share these ideas and theories that interest
+					me. Techologies has always suprised me on how rapidly it gets
+					updated with such a drastic changes. I am currently working as a
+					backend php developer for developing the application. I am also
+					excited on how artificial intelligence really work and its one of in
+					my bucket list of future plan. I want to use technologies to make
+					positive impact in the society.
 				</p>
 			</div>
 		</div>
-		<div class="project" id="project">
-			<h1>Projects</h1>
-			<div class="table">
-				<table id="mytable">
-					<tr>
-						<th>Title</th>
-						<th>Description</th>
-						<th>Language</th>
-					</tr>
-				</table>
-			</div>
-		</div>
-
+		<!-- Footer section -->
 		<img src="http://www.cm.yuntech.edu.tw/English/images/gotop.png" onclick="topFunction()" id="myBtn"
-			title="Go to top">
+			title="Go to top" />
 		<footer class="footer-area">
 			<div class="footer-container">
 				<p>STAY CONNECTED</p>
 				<ul>
 					<li>
 						<a href="https://www.instagram.com/tsheri_sherpa/">
-							<img src="IMAGE/instagram.png" alt="instagram-icon">
+							<img src="IMAGE/instagram.png" alt="instagram-icon" />
 						</a>
 					</li>
 					<li>
 						<a href="https://twitter.com/sherpa_tsheri">
-							<img src="IMAGE/twitter.png" alt="twitter-icon">
+							<img src="IMAGE/twitter.png" alt="twitter-icon" />
 						</a>
 					</li>
 					<li>
 						<a href="https://github.com/TsheriSherpa">
-							<img src="IMAGE/github.png" alt="github-icon">
+							<img src="IMAGE/github.png" alt="github-icon" />
 						</a>
 					</li>
 					<li>
 						<a href="https://www.gmail.com">
-							<img src="IMAGE/email.png" alt="gmail-icon">
+							<img src="IMAGE/email.png" alt="gmail-icon" />
 						</a>
 					</li>
 					<li>
 						<a href="https://www.linkedin.com/in/chiree-sherpa-4358a0180">
-							<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%;">
+							<img src="IMAGE/linkedin.png" alt="instagram-icon" style="border-radius: 50%" />
 						</a>
 					</li>
-
 				</ul>
-
 			</div>
 			<div class="foot">
-				<p class="foot-paragraph1">
-					@All right reserved.
-				</p>
-				<p class="foot-paragraph2">
-					Made by Tsheri Sherpa.
-				</p>
+				<p class="foot-paragraph1">@copyright 2018.</p>
+				<p class="foot-paragraph2">Tsheri Sherpa.</p>
 			</div>
-			
-
 		</footer>
 
+		<!-- Jquery needed -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="JS/javascript.js"></script>
+		<script type="text/javascript">
+      		// getting repositories from github
+ 			// const api_url = "https://api.github.com/users/TsheriSherpa/repos";
+			// getData();
+			// async function getData() {
+			// 	const response = await fetch(api_url);
+			// 	const data = await response.json();
+			// 	for (i = 0; i < data.length; i++) {
+			// 		var node = document.createElement("tr");
+			// 		var child = document.createElement("td");
+			// 		var child1 = document.createElement("td");
+			// 		var child2 = document.createElement("td");
+			// 		var textnode = document.createTextNode(data[i].name);
+			// 		var textnode1 = document.createTextNode(data[i].description);
+			// 		var textnode2 = document.createTextNode(data[i].language);
+			// 		child.appendChild(textnode);
+			// 		child1.appendChild(textnode1);
+			// 		child2.appendChild(textnode2);
+			// 		node.appendChild(child);
+			// 		node.appendChild(child1);
+			// 		node.appendChild(child2);
+			// 		document.getElementById("mytable").appendChild(node);
+			// 	}
+			// }
 
-	<!-- Jquery needed -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="JS/javascript.js"></script>
-
-	<!-- Function used to shrink nav bar removing paddings and adding black background -->
-
+		</script>
+		<!-- Bootstrap Javascript -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"/>
 	</div>
 </body>
 

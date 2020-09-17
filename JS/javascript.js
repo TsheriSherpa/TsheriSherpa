@@ -7,7 +7,8 @@ navBarToggle.addEventListener('click', function () {
 
 $(window).scroll(function() {
 	if ($(document).scrollTop() > 150) {
-		$('.navbar').addClass('affix');
+		const newLocal = 'affix';
+		$('.navbar').addClass(newLocal);
 		if ($(document).scrollTop() > 370) {
 			document.getElementById("progress-container").style.visibility= "visible";
 				myFunction();    
@@ -31,6 +32,26 @@ $(document).ready(function(){
 	} else {
 		document.getElementById("progress-container").style.visibility= "hidden";
 		$('.navbar').removeClass('affix');
+	}
+
+	// js for name typing effect
+	const div = document.createElement('h1');
+	var ele = document.getElementById('word');
+	function animate(){
+		div.className = 'typing';
+		div.innerHTML = '<span style="color:orangered">Tsheri Sherpa<span>';
+		ele.appendChild(div);
+		window.setTimeout(removeDiv, 3000);
+	}
+
+	function removeDiv() {
+		ele.removeChild(div);
+	}
+
+	if (screen.width > 600) {
+		window.setInterval(function(){
+			animate();
+		}, 4000);
 	}
 
 });
@@ -58,3 +79,5 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
