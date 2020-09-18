@@ -26,12 +26,13 @@
 <body class="container-fluid body">
 	<div class="row">
 		<header class="header col-lg-12">
-			<span class="navbar-toggle" id="js-navbar-toggle">
-				<img src="IMAGE/list.png" alt="navbar-button" style="width: 40px" />
-			</span>
+			
 
 			<nav class="navbar" id="navbar">
-				<a href="#" class="logo">Tsheri Sherpa</a>
+				<span class="navbar-toggle" id="js-navbar-toggle">
+					<img src="IMAGE/list.png"  alt="navbar-button" style="width: 40px; margin-top: 10px;" />
+				</span>
+				<a href="#" class="logo" id='main-logo'>Tsheri Sherpa</a>
 				<ul class="main-nav" id="js-menu">
 					<li>
 						<a href="#about" class="nav-links">About</a>
@@ -40,7 +41,7 @@
 						<a href="#project" class="nav-links">Projects</a>
 					</li>
 					<li>
-						<a href="#contact" class="nav-links">Contact</a>
+						<a href="#connect" class="nav-links">Connect</a>
 					</li>
 				</ul>
 			</nav>
@@ -122,7 +123,7 @@
 		<!-- Footer section -->
 		<img src="http://www.cm.yuntech.edu.tw/English/images/gotop.png" onclick="topFunction()" id="myBtn"
 			title="Go to top" />
-		<footer class="footer-area">
+		<footer class="footer-area" id="connect">
 			<div class="footer-container">
 				<p>STAY CONNECTED</p>
 				<ul>
@@ -154,7 +155,7 @@
 				</ul>
 			</div>
 			<div class="foot">
-				<p class="foot-paragraph1">@copyright 2018.</p>
+				<p class="foot-paragraph1">@Copyright 2018.</p>
 				<p class="foot-paragraph2">Tsheri Sherpa.</p>
 			</div>
 		</footer>
@@ -163,6 +164,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="JS/javascript.js"></script>
 		<script type="text/javascript">
+
       		// getting repositories from github
  			// const api_url = "https://api.github.com/users/TsheriSherpa/repos";
 			// getData();

@@ -3,6 +3,11 @@ let mainNav = document.getElementById('js-menu');
 let navBarToggle = document.getElementById('js-navbar-toggle');
 navBarToggle.addEventListener('click', function () {
 	mainNav.classList.toggle('active');
+	var element = document.getElementById('main-logo'),
+    style = window.getComputedStyle(element),
+	top = style.getPropertyValue('visibility');
+	cssValue = top == 'visible' ? 'hidden' : 'visible';
+	element.style.visibility = cssValue;
 });
 
 $(window).scroll(function() {
