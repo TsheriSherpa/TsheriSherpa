@@ -44,7 +44,7 @@ $(document).ready(function(){
 	var ele = document.getElementById('word');
 	function animate(){
 		div.className = 'typing';
-		div.innerHTML = '<span style="color:orangered">Tsheri Sherpa<span>';
+		div.innerHTML = '<span style="color:white">Tsheri Sherpa<span>';
 		ele.appendChild(div);
 		window.setTimeout(removeDiv, 3000);
 	}
