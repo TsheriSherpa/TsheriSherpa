@@ -1,12 +1,1 @@
-<html>
-  <head>
-    <h1> Personal website </h1>
-  </head>
-  <body>
-    <h1> This is my personal portfolio website.</h1>
-    <p> In this website i have tried to make it little bit responsive with respective devices. <br>I have also made an api call to the github inorder to display all the repositories into my website.</p>
-  </body>
-  </html> 
-  
-
-  <a  href="http://tsherisherpa-tsheri.glitch.me" alt="link" > Click here to visit</a>
+<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="chiree-sherpa"><a class="LI-simple-link" href='https://np.linkedin.com/in/chiree-sherpa?trk=profile-badge'>Chiree Sherpa</a></div>
