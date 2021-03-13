@@ -21,6 +21,7 @@
 			to { width: 100% }
 		}
 	</style>
+	<script src='https://cdn.jsdelivr.net/npm/hls.js@latest' type='text/javascript'></script>
 </head>
 
 <body class="container-fluid body">
@@ -119,6 +120,9 @@
 				</p>
 			</div>
 		</div>
+		<div id="video" class="video">
+			<video id='hlsjs_video_tag'></video>
+		</div>
 		<!-- Footer section -->
 		<img src="http://www.cm.yuntech.edu.tw/English/images/gotop.png" onclick="topFunction()" id="myBtn"
 			title="Go to top" />
@@ -187,6 +191,13 @@
 			// 		document.getElementById("mytable").appendChild(node);
 			// 	}
 			// }
+			var video = document.getElementById('hlsjs_video_tag');
+			  var hls = new Hls();
+			  hls.loadSource("https://nepalorigin.nettvnepal.com.np/pull/StarSportSelectHD1.stream/playlist.m3u8");
+			  hls.attachMedia(video);
+			  hls.on(Hls.Events.MANIFEST_PARSED,function() {
+			    video.play();
+			  });
 
 		</script>
 		<!-- Bootstrap Javascript -->
